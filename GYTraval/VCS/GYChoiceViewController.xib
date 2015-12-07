@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GYChoiceViewController">
+            <connections>
+                <outlet property="tv" destination="cyN-qv-k0g" id="4u4-kE-bFT"/>
+                <outlet property="vie" destination="rVC-s5-gFn" id="9VT-fG-NpQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="cao-yS-QvO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVC-s5-gFn">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出去旅行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucS-H2-OTw">
+                            <rect key="frame" x="126" y="29" width="68" height="21"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="17T-Qx-1ex"/>
+                                <constraint firstAttribute="width" constant="68" id="xeI-hj-gwV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="ucS-H2-OTw" firstAttribute="centerY" secondItem="rVC-s5-gFn" secondAttribute="centerY" id="GYR-vX-dZ4"/>
+                        <constraint firstItem="ucS-H2-OTw" firstAttribute="centerX" secondItem="rVC-s5-gFn" secondAttribute="centerX" id="PqO-Ab-GQl"/>
+                        <constraint firstItem="ucS-H2-OTw" firstAttribute="top" secondItem="rVC-s5-gFn" secondAttribute="top" constant="29" id="RKp-JT-fIA"/>
+                        <constraint firstAttribute="height" constant="64" id="qgY-Q0-pbd"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="GYR-vX-dZ4"/>
+                        </mask>
+                    </variation>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cyN-qv-k0g">
+                    <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="7vg-qP-QF0"/>
+                        <outlet property="delegate" destination="-1" id="760-mS-3cE"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cyN-qv-k0g" secondAttribute="trailing" id="48t-NO-Een"/>
+                <constraint firstAttribute="bottom" secondItem="cyN-qv-k0g" secondAttribute="bottom" constant="49" id="LSb-bW-jUg"/>
+                <constraint firstItem="cyN-qv-k0g" firstAttribute="top" secondItem="rVC-s5-gFn" secondAttribute="bottom" id="MtT-rl-kta"/>
+                <constraint firstItem="rVC-s5-gFn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RdP-Wh-BfH"/>
+                <constraint firstAttribute="trailing" secondItem="rVC-s5-gFn" secondAttribute="trailing" id="bUJ-SV-ICp"/>
+                <constraint firstItem="cyN-qv-k0g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nKj-Mw-sBB"/>
+                <constraint firstItem="rVC-s5-gFn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="omr-bG-axx"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="27" y="287"/>
+        </view>
+    </objects>
+</document>

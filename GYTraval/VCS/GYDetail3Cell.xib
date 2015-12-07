@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="GYDetail3Cell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPB-NY-PAo">
+                        <rect key="frame" x="15" y="23" width="195" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="NKv-R7-E1D"/>
+                            <constraint firstAttribute="width" constant="195" id="rSc-0G-hHD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szm-Dp-rSr">
+                        <rect key="frame" x="15" y="62" width="195" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="195" id="JPg-Ah-G44"/>
+                            <constraint firstAttribute="height" constant="21" id="UxY-nb-iDl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_blackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="Njb-Lr-dQQ">
+                        <rect key="frame" x="218" y="8" width="1" height="80"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="mVW-F9-JFj"/>
+                            <constraint firstAttribute="width" constant="1" id="q6g-a8-SBd"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muO-tU-OhV">
+                        <rect key="frame" x="231" y="18" width="70" height="70"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="HHM-1P-Wfg"/>
+                            <constraint firstAttribute="height" constant="70" id="liA-kh-7vu"/>
+                        </constraints>
+                        <state key="normal" image="activity_map1.png"/>
+                        <connections>
+                            <action selector="mapsAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GpB-cA-dfU"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="muO-tU-OhV" secondAttribute="trailing" constant="19" id="2i4-1s-VQr"/>
+                    <constraint firstItem="Szm-Dp-rSr" firstAttribute="top" secondItem="PPB-NY-PAo" secondAttribute="bottom" constant="18" id="5Gf-CK-dlZ"/>
+                    <constraint firstItem="muO-tU-OhV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="6Gz-os-qye"/>
+                    <constraint firstItem="Szm-Dp-rSr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="PLR-Lp-ETC"/>
+                    <constraint firstItem="PPB-NY-PAo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Tcm-iA-bVn"/>
+                    <constraint firstItem="muO-tU-OhV" firstAttribute="leading" secondItem="Njb-Lr-dQQ" secondAttribute="trailing" constant="12" id="VIO-nz-r1I"/>
+                    <constraint firstItem="PPB-NY-PAo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="VlL-9K-LgG"/>
+                    <constraint firstItem="Njb-Lr-dQQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Zai-GV-6bx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="fLb" destination="PPB-NY-PAo" id="8eq-UW-6xx"/>
+                <outlet property="sLb" destination="Szm-Dp-rSr" id="rb6-Wt-MH0"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="activity_map1.png" width="124" height="124"/>
+        <image name="menu_blackground.png" width="1" height="1136"/>
+    </resources>
+</document>

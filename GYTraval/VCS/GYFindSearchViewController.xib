@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GYFindSearchViewController">
+            <connections>
+                <outlet property="seachBar" destination="kva-wv-Uto" id="OEM-xB-IiL"/>
+                <outlet property="searchDisplay" destination="CI5-9c-10Z" id="E6a-Wu-CrL"/>
+                <outlet property="searchDisplayController" destination="CI5-9c-10Z" id="BCw-SV-hsZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McG-Np-oLI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRX-aU-QdY">
+                            <rect key="frame" x="261" y="26" width="46" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Nxn-kN-Laa"/>
+                                <constraint firstAttribute="width" constant="46" id="PtP-qB-tOU"/>
+                            </constraints>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="2jP-7b-2ez"/>
+                            </connections>
+                        </button>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kva-wv-Uto">
+                            <rect key="frame" x="8" y="17" width="253" height="44"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="A69-Rj-wxY"/>
+                            </constraints>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="cfe-Xq-vy7"/>
+                            </connections>
+                        </searchBar>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="LRX-aU-QdY" firstAttribute="top" secondItem="McG-Np-oLI" secondAttribute="top" constant="26" id="I9A-cc-7Ux"/>
+                        <constraint firstItem="LRX-aU-QdY" firstAttribute="leading" secondItem="kva-wv-Uto" secondAttribute="trailing" id="Kv8-jG-FGo"/>
+                        <constraint firstAttribute="height" constant="64" id="Llo-y2-urG"/>
+                        <constraint firstItem="kva-wv-Uto" firstAttribute="leading" secondItem="McG-Np-oLI" secondAttribute="leading" constant="8" id="NQt-m6-KlY"/>
+                        <constraint firstItem="kva-wv-Uto" firstAttribute="top" secondItem="McG-Np-oLI" secondAttribute="top" constant="17" id="hiy-4w-6rB"/>
+                        <constraint firstAttribute="trailing" secondItem="LRX-aU-QdY" secondAttribute="trailing" constant="13" id="oaK-oK-ZJd"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景图.png" translatesAutoresizingMaskIntoConstraints="NO" id="mt5-Px-6KN">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <animations/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门搜索" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iof-TX-IOo">
+                    <rect key="frame" x="8" y="81" width="68" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="68" id="83n-ma-5fM"/>
+                        <constraint firstAttribute="height" constant="21" id="tNg-cV-AJT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Guru_Topic_List_topic_separator.png" translatesAutoresizingMaskIntoConstraints="NO" id="UCJ-G5-D0O">
+                    <rect key="frame" x="40" y="105" width="240" height="4"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="I2G-bA-5sV"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="int-OE-dAL">
+                    <rect key="frame" x="20" y="122" width="30" height="30"/>
+                    <animations/>
+                    <state key="normal" title="骑行"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uW3-yh-Gl5">
+                    <rect key="frame" x="109" y="122" width="30" height="30"/>
+                    <animations/>
+                    <state key="normal" title="东京"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YG-bd-Ith">
+                    <rect key="frame" x="190" y="122" width="30" height="30"/>
+                    <animations/>
+                    <state key="normal" title="丛林"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDJ-Da-stB">
+                    <rect key="frame" x="259" y="122" width="30" height="30"/>
+                    <animations/>
+                    <state key="normal" title="潜水"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIW-wk-wn0">
+                    <rect key="frame" x="20" y="152" width="63" height="30"/>
+                    <animations/>
+                    <state key="normal" title="马拉松"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anA-JU-2Eh">
+                    <rect key="frame" x="20" y="185" width="45" height="30"/>
+                    <animations/>
+                    <state key="normal" title="热气球"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaB-gh-W5w">
+                    <rect key="frame" x="109" y="185" width="45" height="30"/>
+                    <animations/>
+                    <state key="normal" title="海豹"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydn-qH-tKJ">
+                    <rect key="frame" x="170" y="152" width="63" height="30"/>
+                    <animations/>
+                    <state key="normal" title="跳伞"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNU-ja-Whc">
+                    <rect key="frame" x="241" y="152" width="63" height="30"/>
+                    <animations/>
+                    <state key="normal" title="普罗旺斯"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yY-4N-qxR">
+                    <rect key="frame" x="98" y="152" width="64" height="30"/>
+                    <animations/>
+                    <state key="normal" title="沙漠"/>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9yY-4N-qxR" firstAttribute="leading" secondItem="wIW-wk-wn0" secondAttribute="trailing" constant="15" id="3kM-FT-9vS"/>
+                <constraint firstItem="ZaB-gh-W5w" firstAttribute="height" secondItem="anA-JU-2Eh" secondAttribute="height" id="4uP-NR-Ake"/>
+                <constraint firstItem="anA-JU-2Eh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="53B-nj-6Xn"/>
+                <constraint firstItem="iNU-ja-Whc" firstAttribute="top" secondItem="kDJ-Da-stB" secondAttribute="bottom" id="5Tx-yD-iEM"/>
+                <constraint firstItem="ZaB-gh-W5w" firstAttribute="leading" secondItem="anA-JU-2Eh" secondAttribute="trailing" constant="44" id="7ha-fF-hTg"/>
+                <constraint firstItem="McG-Np-oLI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="81a-d2-Lwd"/>
+                <constraint firstItem="mt5-Px-6KN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8NH-NF-Zra"/>
+                <constraint firstItem="4YG-bd-Ith" firstAttribute="top" secondItem="UCJ-G5-D0O" secondAttribute="bottom" constant="13" id="CQa-Q7-mFP"/>
+                <constraint firstItem="ydn-qH-tKJ" firstAttribute="leading" secondItem="9yY-4N-qxR" secondAttribute="trailing" constant="8" id="CS0-8L-xDX"/>
+                <constraint firstAttribute="bottom" secondItem="mt5-Px-6KN" secondAttribute="bottom" id="Ciu-Xp-3Fb"/>
+                <constraint firstItem="wIW-wk-wn0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="CmT-1J-c5a"/>
+                <constraint firstItem="UCJ-G5-D0O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="Fbb-Kv-guy"/>
+                <constraint firstItem="iNU-ja-Whc" firstAttribute="width" secondItem="wIW-wk-wn0" secondAttribute="width" id="HLm-Zm-fCG"/>
+                <constraint firstItem="mt5-Px-6KN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IN7-iu-qEr"/>
+                <constraint firstItem="iof-TX-IOo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="JEO-Yl-1Yf"/>
+                <constraint firstItem="uW3-yh-Gl5" firstAttribute="leading" secondItem="int-OE-dAL" secondAttribute="trailing" constant="59" id="Ki8-9u-WLm"/>
+                <constraint firstItem="kDJ-Da-stB" firstAttribute="width" secondItem="int-OE-dAL" secondAttribute="width" id="MRb-ye-cll"/>
+                <constraint firstItem="McG-Np-oLI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="P0k-Tr-xSM"/>
+                <constraint firstAttribute="trailing" secondItem="McG-Np-oLI" secondAttribute="trailing" id="QW8-qM-56G"/>
+                <constraint firstAttribute="trailing" secondItem="kDJ-Da-stB" secondAttribute="trailing" constant="31" id="S7f-z6-9dW"/>
+                <constraint firstItem="uW3-yh-Gl5" firstAttribute="width" secondItem="int-OE-dAL" secondAttribute="width" id="Sig-rt-uUQ"/>
+                <constraint firstItem="iNU-ja-Whc" firstAttribute="leading" secondItem="ydn-qH-tKJ" secondAttribute="trailing" constant="8" id="TDr-xz-Sgg"/>
+                <constraint firstItem="kDJ-Da-stB" firstAttribute="leading" secondItem="4YG-bd-Ith" secondAttribute="trailing" constant="39" id="TNy-Zo-juE"/>
+                <constraint firstItem="kDJ-Da-stB" firstAttribute="height" secondItem="int-OE-dAL" secondAttribute="height" id="U4N-Iw-bxf"/>
+                <constraint firstItem="4YG-bd-Ith" firstAttribute="height" secondItem="int-OE-dAL" secondAttribute="height" id="YQt-4y-Cpd"/>
+                <constraint firstItem="4YG-bd-Ith" firstAttribute="leading" secondItem="uW3-yh-Gl5" secondAttribute="trailing" constant="51" id="bWe-XS-VWc"/>
+                <constraint firstAttribute="trailing" secondItem="iNU-ja-Whc" secondAttribute="trailing" constant="16" id="bjm-Vm-iWF"/>
+                <constraint firstItem="9yY-4N-qxR" firstAttribute="height" secondItem="wIW-wk-wn0" secondAttribute="height" id="bxn-Cl-Xqv"/>
+                <constraint firstItem="ZaB-gh-W5w" firstAttribute="top" secondItem="9yY-4N-qxR" secondAttribute="bottom" constant="3" id="c33-na-XVI"/>
+                <constraint firstItem="kDJ-Da-stB" firstAttribute="top" secondItem="UCJ-G5-D0O" secondAttribute="bottom" constant="13" id="dV7-a2-d47"/>
+                <constraint firstItem="wIW-wk-wn0" firstAttribute="top" secondItem="int-OE-dAL" secondAttribute="bottom" id="eBd-nB-eMQ"/>
+                <constraint firstItem="iof-TX-IOo" firstAttribute="top" secondItem="McG-Np-oLI" secondAttribute="bottom" constant="17" id="eE0-WM-ya1"/>
+                <constraint firstItem="ydn-qH-tKJ" firstAttribute="top" secondItem="4YG-bd-Ith" secondAttribute="bottom" id="et0-1A-wLz"/>
+                <constraint firstItem="ZaB-gh-W5w" firstAttribute="width" secondItem="anA-JU-2Eh" secondAttribute="width" id="gxB-dm-z1u"/>
+                <constraint firstItem="anA-JU-2Eh" firstAttribute="top" secondItem="wIW-wk-wn0" secondAttribute="bottom" constant="3" id="i36-3I-XFe"/>
+                <constraint firstItem="iNU-ja-Whc" firstAttribute="height" secondItem="wIW-wk-wn0" secondAttribute="height" id="i4y-b3-W1a"/>
+                <constraint firstItem="9yY-4N-qxR" firstAttribute="width" secondItem="wIW-wk-wn0" secondAttribute="width" id="iei-HC-rMf"/>
+                <constraint firstAttribute="trailing" secondItem="mt5-Px-6KN" secondAttribute="trailing" id="ilO-Cb-2Ub"/>
+                <constraint firstItem="UCJ-G5-D0O" firstAttribute="top" secondItem="iof-TX-IOo" secondAttribute="bottom" constant="3" id="k14-fE-6TT"/>
+                <constraint firstItem="int-OE-dAL" firstAttribute="top" secondItem="UCJ-G5-D0O" secondAttribute="bottom" constant="13" id="lHM-u4-Ig8"/>
+                <constraint firstItem="ydn-qH-tKJ" firstAttribute="height" secondItem="wIW-wk-wn0" secondAttribute="height" id="lrL-TJ-Nhw"/>
+                <constraint firstItem="uW3-yh-Gl5" firstAttribute="height" secondItem="int-OE-dAL" secondAttribute="height" id="ow2-ae-5Ut"/>
+                <constraint firstItem="9yY-4N-qxR" firstAttribute="top" secondItem="uW3-yh-Gl5" secondAttribute="bottom" id="qf6-Mm-lmc"/>
+                <constraint firstItem="mt5-Px-6KN" firstAttribute="top" secondItem="McG-Np-oLI" secondAttribute="bottom" id="str-IG-4Ml"/>
+                <constraint firstItem="mt5-Px-6KN" firstAttribute="top" secondItem="McG-Np-oLI" secondAttribute="bottom" id="tgf-aB-E9i"/>
+                <constraint firstItem="ydn-qH-tKJ" firstAttribute="width" secondItem="wIW-wk-wn0" secondAttribute="width" id="tvU-6O-wWy"/>
+                <constraint firstItem="uW3-yh-Gl5" firstAttribute="top" secondItem="UCJ-G5-D0O" secondAttribute="bottom" constant="13" id="uYD-HS-eEB"/>
+                <constraint firstItem="int-OE-dAL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="vIl-1t-Fce"/>
+                <constraint firstAttribute="trailing" secondItem="UCJ-G5-D0O" secondAttribute="trailing" constant="40" id="x33-f2-O8Y"/>
+                <constraint firstItem="4YG-bd-Ith" firstAttribute="width" secondItem="int-OE-dAL" secondAttribute="width" id="yv9-DS-F9e"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="254" y="350"/>
+        </view>
+        <searchDisplayController id="CI5-9c-10Z">
+            <connections>
+                <outlet property="delegate" destination="-1" id="14I-jc-CQd"/>
+                <outlet property="searchBar" destination="kva-wv-Uto" id="8b8-9u-Ql3"/>
+                <outlet property="searchContentsController" destination="-1" id="xIE-G4-Nqn"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="H2P-c6-EiR"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="qmt-7I-ZOD"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+    <resources>
+        <image name="Guru_Topic_List_topic_separator.png" width="210" height="4"/>
+        <image name="背景图.png" width="640" height="960"/>
+    </resources>
+</document>
